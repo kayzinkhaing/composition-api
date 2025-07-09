@@ -1,0 +1,77 @@
+{
+  "posts": [
+    {
+      "id": "ef8a",
+      "title": "Mastering HTML5 Semantics",
+      "body": "Using semantic HTML improves accessibility, SEO, and code clarity. Elements like <article>, <section>, and <aside> help browsers and assistive tech understand page structure.",
+      "tags": [
+        "html",
+        "accessibility",
+        "seo"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "CSS Grid vs Flexbox: When to Use Each",
+      "body": "Both Flexbox and Grid are powerful layout systems in CSS. Grid is ideal for two-dimensional layouts, while Flexbox shines in one-dimensional arrangements.",
+      "tags": [
+        "css",
+        "layout",
+        "grid",
+        "flexbox"
+      ]
+    },
+    {
+      "id": "ff91",
+      "title": "Node.js Crash Course for Beginners",
+      "body": "Node.js allows JavaScript to run on the server, enabling backend development with the same language used on the frontend. It's great for building fast and scalable network apps.",
+      "tags": [
+        "nodejs",
+        "javascript",
+        "backend"
+      ]
+    },
+    {
+      "title": "Understanding Vue 3 Composition API",
+      "id": "1",
+      "body": "Vue 3 introduces the Composition API, which offers a more flexible way to organize logic inside components. It allows developers to group related code by feature, making components easier to maintain."
+    },
+    {
+      "title": "Getting Started with JavaScript ES6",
+      "id": "2",
+      "body": "ES6 brought many improvements to JavaScript, including arrow functions, template literals, destructuring, and modules. These features make your code cleaner and more powerful."
+    },
+    {
+      "title": "Why You Should Learn Git and GitHub",
+      "id": "3",
+      "body": "Version control is an essential skill for developers. Git allows you to track code changes, while GitHub helps you collaborate with others and contribute to open source projects."
+    },
+    {
+      "title": "Building Responsive Layouts with CSS Flexbox",
+      "id": "4",
+      "body": "Flexbox is a CSS layout module that makes it easy to design flexible and responsive layout structures. It's especially useful for aligning elements in a row or column, even when their size is unknown."
+    },
+    {
+      "id": "f92e",
+      "title": "Full Stack Developer",
+      "body": "You must be a programmer",
+      "tags": [
+        "html",
+        "css",
+        "javascript",
+        "php",
+        "laravel"
+      ]
+    },
+    {
+      "id": "cd4a",
+      "title": "ITVisionHub",
+      "body": "This is training class , with programming languages,",
+      "tags": [
+        "html",
+        "css",
+        "javascript"
+      ]
+    }
+  ]
+}
