@@ -22,6 +22,8 @@
 <script>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { db  } from '@/firebase/config';
+import { collection, addDoc } from 'firebase/firestore';
 
 export default {
   setup() {
@@ -45,35 +47,36 @@ export default {
         body: body.value,
         tags: tags.value,
       };
+       let res = await addDoc(collection(db, "posts"), postData);
+      //  console.log(res);
+      // try {
+      //   const response = await fetch('http://localhost:3000/posts', {
+      //     method: 'POST',
+      //     headers: {
+      //       'Content-Type': 'application/json',
+      //     },
+      //     body: JSON.stringify(postData),
+      //   });
 
-      try {
-        const response = await fetch('http://localhost:3000/posts', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(postData),
-        });
+      //   if (!response.ok) {
+      //     throw new Error(`Server error: ${response.statusText}`);
+      //   }
 
-        if (!response.ok) {
-          throw new Error(`Server error: ${response.statusText}`);
-        }
+      //   const result = await response.json();
+      //   console.log('Post added:', result);
 
-        const result = await response.json();
-        console.log('Post added:', result);
-
-        // Clear form
-        title.value = '';
-        body.value = '';
-        tag.value = '';
-        tags.value = [];
-        // alert('Post added successfully!');
+      //   // Clear form
+      //   title.value = '';
+      //   body.value = '';
+      //   tag.value = '';
+      //   tags.value = [];
+      //   // alert('Post added successfully!');
 
         router.push("/");
-      } catch (error) {
-        console.error('Error adding post:', error);
-        alert('Failed to add post. Check console for details.');
-      }
+      // } catch (error) {
+      //   console.error('Error adding post:', error);
+      //   alert('Failed to add post. Check console for details.');
+      // }
     };
 
     return { title,body,tag,tags,handleKeydown,addPost };
