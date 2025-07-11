@@ -22,8 +22,8 @@
 <script>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { db  } from '@/firebase/config';
-import { collection, addDoc } from 'firebase/firestore';
+import { db,timestamp  } from '@/firebase/config';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 export default {
   setup() {
@@ -46,6 +46,8 @@ export default {
         title: title.value,
         body: body.value,
         tags: tags.value,
+    created_at:serverTimestamp()
+
       };
        let res = await addDoc(collection(db, "posts"), postData);
       //  console.log(res);

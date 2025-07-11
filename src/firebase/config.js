@@ -1,11 +1,10 @@
-//v11
 // firebase.js (or firebaseConfig.js)
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, serverTimestamp } from "firebase/firestore";
 
 // Your Firebase config
 const firebaseConfig = {
-    apiKey: "AIzaSyBLspW4l_7_OXxECZr3l-toZDFoaOsUud0",
+  apiKey: "AIzaSyBLspW4l_7_OXxECZr3l-toZDFoaOsUud0",
   authDomain: "vue-blog-system-fb07d.firebaseapp.com",
   projectId: "vue-blog-system-fb07d",
   storageBucket: "vue-blog-system-fb07d.firebasestorage.app",
@@ -20,8 +19,10 @@ const app = initializeApp(firebaseConfig);
 // Init Firestore service
 const db = getFirestore(app);
 
-export { db };
+// Correct timestamp setup
+const timestamp = serverTimestamp();
 
+export { db, timestamp };
 
 
 
